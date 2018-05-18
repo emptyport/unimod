@@ -1,5 +1,5 @@
 {
-  "name": "unimod",
+  "name": "js-unimod",
   "version": "0.0.1",
   "description": "A module to provide unimod modifications",
   "main": "index.js",

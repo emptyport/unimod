@@ -1,3 +1,7 @@
-module.exports.modify = function(sequence, mod_params) {
-  console.log('hello');
+var isotopes = require('./ISOTOPES.json');
+
+module.exports = function(element){
+  if (!(element in isotopes)) return {};
+
+  return isotopes[element];
 }
