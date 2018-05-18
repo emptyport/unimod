@@ -1,6 +1,8 @@
 var unimod = require("./index");
 
-unimod.modify('hello', {});
+console.log(unimod.getByName('Oxidation'));
+console.log(unimod.getById(3));
+
 
 
 

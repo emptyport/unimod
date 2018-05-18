@@ -8,6 +8,7 @@ var fs = require('fs');
 var filename = 'unimod.obo';
 
 var unimod_definitions = {};
+var name_id_index = {};
 
 fs.readFile(filename, 'utf8', function(err, data){
   if (err) throw err;
@@ -28,6 +29,7 @@ fs.readFile(filename, 'utf8', function(err, data){
         return;
       }
       unimod_definitions[current_mod['name'].toLowerCase()] = current_mod;
+      name_id_index[current_mod['id']] = current_mod['name'].toLowerCase();
     }
 
     if(begin_term) {
@@ -74,6 +76,10 @@ fs.readFile(filename, 'utf8', function(err, data){
   });
 
   fs.writeFile('./unimod.json', JSON.stringify(unimod_definitions, null, 2), function(err){
+    if (err) throw err;
+  });
+  
+  fs.writeFile('./name_id_index.json', JSON.stringify(name_id_index, null, 2), function(err){
     if (err) throw err;
   });
 });

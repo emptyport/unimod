@@ -1,6 +1,6 @@
 {
   "name": "js-unimod",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A module to provide unimod modifications",
   "main": "index.js",
   "scripts": {
@@ -28,8 +28,7 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.9.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "directories": {
     "test": "test"
   }
