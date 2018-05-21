@@ -9,6 +9,7 @@ test('Default Settings', function(t) {
   t.equal(15.994915, oxidation['mono_mass'], 'Correctly retrieved oxidation by name');
   t.equal(oxidation['avge_mass'], uppercaseOxidation['avge_mass'], 'Case insensitive');
   t.equal('Biotin', biotin['name'], 'Correctly retrieved biotin by ID');
+  t.equal(1476, unimod.listMods().length, 'Returns list of modification names');
   t.end();
 });
 

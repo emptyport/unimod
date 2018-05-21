@@ -31,6 +31,25 @@ var biotin = unimod.getById(3);
     "composition": "H(14) C(10) N(2) O(2) S"
 }
 */
+var modifications = unimod.listMods();
+/*
+Returns an array of all the modification names
+[ 'acetyl',
+  'amidated',
+  'biotin',
+  'carbamidomethyl',
+  'carbamyl',
+  'carboxymethyl',
+  'deamidated',
+  'icat-g',
+  'icat-g:2h(8)',
+  'met->hse',
+  'met->hsl',
+  'icat-d:2h(8)',
+  'icat-d',
+  'nipcam',
+  ... ]
+*/
 ```
 
 Data are returned as JavaScript objects with the following fields:

@@ -11,3 +11,13 @@ module.exports.getById = function(id) {
   if (!(id in name_id_index)) return {};
   return unimod_definitions[name_id_index[id]];
 }
+
+module.exports.listMods = function() {
+  var names = [];
+  for (var id in name_id_index) {
+    if (name_id_index.hasOwnProperty(id)) {
+      names.push(name_id_index[id]);
+    }
+  }
+  return names;
+}
